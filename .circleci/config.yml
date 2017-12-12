@@ -76,11 +76,11 @@ jobs:
 
 
       ## Cấu hình test
-      - test:
-      override:
-      - ./vendor/bin/phpcs --standard=phpcs.xml app/ -n
-      - ./vendor/bin/phpmd app/ text phpmd.xml
-      - ./vendor/bin/phpunit
+      # - test:
+      # override:
+      # - ./vendor/bin/phpcs --standard=phpcs.xml app/ -n
+      # - ./vendor/bin/phpmd app/ text phpmd.xml
+      # - ./vendor/bin/phpunit
 
 
       - run:
