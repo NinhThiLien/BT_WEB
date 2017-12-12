@@ -103,8 +103,7 @@
                                         </form>
                                     </div>
                                 </div>
-                                {{-- <img src="images/home/new.png" class="new" alt="" /> --}}
-                                {{-- <img src="images/home/sale.png" class="new" alt="" /> --}}
+                                
                             </div>
                             <div class="choose">
                                 <ul class="nav nav-pills nav-justified">
@@ -506,7 +505,7 @@
                             <i class="fa fa-angle-right"></i>
                         </a>			
                     </div>
-                </div><!--/recommended_items-->
+                </div>
 
             </div>
         </div>

@@ -11,9 +11,6 @@ class SearchController extends Controller
 {
     //
     public function coachlist(Request $request){
-        // $search1=$request->search;
-        // $coachs = DB::table('users')->where('coach', 1)->whereRaw("MATCH (name) AGAINST (? IN BOOLEAN MODE)", [$search1])->get();
-        // DB::statement("SELECT * FROM 'users' WHERE 'coach' = 1 AND 'name' MATCH");
         $coachs = DB::select( DB::raw("SELECT * FROM users WHERE coach = 1"));  
 
         $title = 'Search';

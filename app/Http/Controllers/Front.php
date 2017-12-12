@@ -21,25 +21,23 @@ class Front extends Controller
 {
     var $title;
     var $description;
-    // public function __construct()
-    // {
-    //    $this->middleware('auth');
-    // }
-
-   
+    
    
     public function contact_us() {
         return view('contact_us', array('title' => 'Welcome', 'description' => '', 'page' => 'contact_us'));
     }
 
+
     public function login() {
         return view('login', array('title' => 'Welcome', 'description' => '', 'page' => '/'));
     }
+
 
     public function logout() {
         Auth::logout();
         return Redirect::away('login');
     }
+
 
     public function register()
     {
@@ -63,6 +61,7 @@ class Front extends Controller
 
         return Redirect::away('auth/login')->with('message', 'Registration Success');;
     }
+
 
     public function authenticate()
     {

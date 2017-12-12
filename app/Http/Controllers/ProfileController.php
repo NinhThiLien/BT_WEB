@@ -10,6 +10,7 @@ use App\Participate;
 
 class ProfileController extends Controller
 {
+    
     public function update(){
         //
         $user = Auth::user();

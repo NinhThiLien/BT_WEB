@@ -20,6 +20,7 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function newpost()
     {
         $user = Auth::user();
@@ -28,9 +29,10 @@ class PostController extends Controller
         ;
         
     }
+
+
     public function addpost(Request $rq){
         $nuser = Auth::user();
-        // $nuserid = $rq->input('nuserid');
         $ntitle = $rq->input('ntitle');
         $content = $rq->input('content');
         $max = (DB::table('programs')->max('id'))+1;
@@ -43,16 +45,16 @@ class PostController extends Controller
             echo '';
         }
          if ((isset($nuser)) && isset($filename)){
-                    // if (isset($cmt)){
+                    
                                              
                             DB::table('programs')->insert(
                                 ['id' => $max, 'url' => $max, 'title' => $ntitle, 'content' => $content, 'idowner' => $nuser->id, 'coachid' => '1', 'image' => $filename]);
                             
-                        // }
+                        
                     } else  DB::table('programs')->insert(
                                 ['id' => $max, 'url' => $max, 'title' => $ntitle, 'content' => $content, 'idowner' => $nuser->id, 'coachid' => '1']);
        
-        // return redirect(url()->previous().'#cmt');
+        
         return redirect('blog/'.$max);
     }
     

@@ -17,20 +17,7 @@
 </section>
 
 <section>
-   {{--  <script type="text/javascript">
-        
-        $(document).ready(function () {
-            $('#SubBtn').click(function() {
-                var age = $.trim($('#age').val());
-                var height = $.trim($('#height').val());
-                var weight = $.trim($('#weight').val());
-                var level = 2;
-                if (age>50) level = 1;
-                if (age<=40 && (weight>(height-90))) level = 3;
-                
-            });
-        });
-    </script>  --}}
+   
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
