@@ -29,9 +29,6 @@ class TableHelper extends Helper
     const LAYOUT_BORDERLESS = 1;
     const LAYOUT_COMPACT = 2;
 
-    /**
-     * @var Table
-     */
     private $table;
 
     public function __construct($triggerDeprecationError = true)
@@ -48,7 +45,7 @@ class TableHelper extends Helper
      *
      * @param int $layout self::LAYOUT_*
      *
-     * @return TableHelper
+     * @return $this
      *
      * @throws \InvalidArgumentException when the table layout is not known
      */
@@ -69,7 +66,7 @@ class TableHelper extends Helper
 
             default:
                 throw new \InvalidArgumentException(sprintf('Invalid table layout "%s".', $layout));
-        };
+        }
 
         return $this;
     }
@@ -114,7 +111,7 @@ class TableHelper extends Helper
      *
      * @param string $paddingChar
      *
-     * @return TableHelper
+     * @return $this
      */
     public function setPaddingChar($paddingChar)
     {
@@ -128,7 +125,7 @@ class TableHelper extends Helper
      *
      * @param string $horizontalBorderChar
      *
-     * @return TableHelper
+     * @return $this
      */
     public function setHorizontalBorderChar($horizontalBorderChar)
     {
@@ -142,7 +139,7 @@ class TableHelper extends Helper
      *
      * @param string $verticalBorderChar
      *
-     * @return TableHelper
+     * @return $this
      */
     public function setVerticalBorderChar($verticalBorderChar)
     {
@@ -156,7 +153,7 @@ class TableHelper extends Helper
      *
      * @param string $crossingChar
      *
-     * @return TableHelper
+     * @return $this
      */
     public function setCrossingChar($crossingChar)
     {
@@ -170,7 +167,7 @@ class TableHelper extends Helper
      *
      * @param string $cellHeaderFormat
      *
-     * @return TableHelper
+     * @return $this
      */
     public function setCellHeaderFormat($cellHeaderFormat)
     {
@@ -184,7 +181,7 @@ class TableHelper extends Helper
      *
      * @param string $cellRowFormat
      *
-     * @return TableHelper
+     * @return $this
      */
     public function setCellRowFormat($cellRowFormat)
     {
@@ -198,7 +195,7 @@ class TableHelper extends Helper
      *
      * @param string $cellRowContentFormat
      *
-     * @return TableHelper
+     * @return $this
      */
     public function setCellRowContentFormat($cellRowContentFormat)
     {
@@ -212,7 +209,7 @@ class TableHelper extends Helper
      *
      * @param string $borderFormat
      *
-     * @return TableHelper
+     * @return $this
      */
     public function setBorderFormat($borderFormat)
     {
@@ -226,7 +223,7 @@ class TableHelper extends Helper
      *
      * @param int $padType STR_PAD_*
      *
-     * @return TableHelper
+     * @return $this
      */
     public function setPadType($padType)
     {
@@ -246,8 +243,6 @@ class TableHelper extends Helper
      * | 9971-5-0210-0 | A Tale of Two Cities  | Charles Dickens  |
      * | 960-425-059-0 | The Lord of the Rings | J. R. R. Tolkien |
      * +---------------+-----------------------+------------------+
-     *
-     * @param OutputInterface $output
      */
     public function render(OutputInterface $output)
     {
