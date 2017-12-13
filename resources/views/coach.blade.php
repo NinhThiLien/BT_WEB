@@ -10,7 +10,7 @@
 </head>
 @section('content') 
 <section id="advertisement">
-    
+
 </section>
 
 <section>

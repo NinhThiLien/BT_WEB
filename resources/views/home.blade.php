@@ -103,7 +103,7 @@
                                         </form>
                                     </div>
                                 </div>
-                                
+
                             </div>
                             <div class="choose">
                                 <ul class="nav nav-pills nav-justified">
@@ -505,7 +505,9 @@
                             <i class="fa fa-angle-right"></i>
                         </a>			
                     </div>
+
                 </div>
+
 
             </div>
         </div>

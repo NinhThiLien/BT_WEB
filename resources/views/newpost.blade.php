@@ -51,7 +51,9 @@
                                     <label>Select image to upload:</label>
                                     <input type="file" name="file" id="file">
                                     <button class="btn btn-primary"  type="submit" name="cmt" id="cmt" >Post</button>
+
                                 </form>        
+
                 </div>
             </div>
         </div>

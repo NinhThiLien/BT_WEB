@@ -23,6 +23,8 @@ class ProgramController extends Controller
      */
     
 
+
+
      public function blog() {
         $progs = Program::where('id', '>', 0)->paginate(5);
 
@@ -52,7 +54,6 @@ class ProgramController extends Controller
         $prog = Program::find($prog->id);
         $batchs = Program::find($prog->id)->batchs;
         $actions = DB::table('actions')->select('id')->join('batchs', 'actions.id', '=', 'batchs.actid')->select('action.*')->where('batch.prg', $prog->id);
-        
         $coach = Program::find($prog->id)->coach;
         $action_date = Batch::select('date')->where('prgid', $prog->id)->distinct()->get();
         
@@ -83,10 +84,13 @@ class ProgramController extends Controller
                         );
                    
                 }
+
             }
         return Redirect::to(URL::previous());
     }
+   
     public function postreg(Request $rq) {
+    // Lay thong tin POST
         $nuserid = $rq->input('nuserid');
         $nprogid = $rq->input('nprogid');
        
@@ -116,7 +120,7 @@ class ProgramController extends Controller
         if (isset(Auth::user()->id)) $user = Auth::user();
 
         if ((isset($nuserid))){
-                                             
+                                         
                             DB::table('comments')->insert(
                                 ['idprog' => $nprogid, 'iduser' => $nuserid, 'content' => $content]
                             );
@@ -125,6 +129,7 @@ class ProgramController extends Controller
     }
 
      public function postlike1(Request $rq) {
+
         $nuserid = $rq->input('nuserid');
         $nprogid = $rq->input('nprogid');
 

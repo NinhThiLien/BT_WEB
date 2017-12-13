@@ -72,6 +72,7 @@
                                     
                                       <div class="form-group">
                                         <input pattern=".{6,}" type="password" data-minlength="6" class="form-control" id="password" name="password" placeholder="Password *" required>
+
                                       </div>
                                       <div class="form-group">
                                         <input type="password" class="form-control" id="passwordconfirm" data-match="#password" data-match-error="Whoops, these don't match" placeholder="Confirm Password *" required>
@@ -122,6 +123,7 @@
            
                document.getElementById("SignBtn").onclick = function() {
                     
+s
                     checked = $("input[type=checkbox]:checked").length;
                     if(!checked) {
                         alert("You must check at least one Type's checkbox.");

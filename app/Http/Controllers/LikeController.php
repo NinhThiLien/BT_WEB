@@ -17,8 +17,6 @@ class LikeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
-    
     public function showtop(Request $request)
     {
         $top= DB::table('likes')->select('idprg', DB::raw('count(*) as count'))->groupBy('idprg')->orderBy('count', 'desc')->get();

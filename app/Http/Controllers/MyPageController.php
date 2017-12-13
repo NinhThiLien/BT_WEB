@@ -17,7 +17,9 @@ class MyPageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
+
+
+
      public function mypage() {
      	$user = Auth::user();
     	

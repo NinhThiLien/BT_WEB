@@ -6,9 +6,22 @@ namespace App;
 
 class Program extends BaseModel
 {
+<<<<<<< HEAD
 	
     protected $table = 'programs';
     
+=======
+	///////////////
+	// old model //
+	///////////////
+    // protected $primaryKey = 'id';
+    protected $table = 'programs';
+    // protected $fillable = array('url', 'title', 'description', 'content', 'blog', 'created_at_ip', 'updated_at_ip');
+
+    ///////////////
+    // new model //
+    ///////////////
+>>>>>>> Bai tap web
     protected $fillable = array('id', 'url', 'title', 'description', 'content', 'image', 'blog', 'category_id');
 
     public static function prevBlogPostUrl($id)

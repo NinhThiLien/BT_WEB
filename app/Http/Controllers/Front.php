@@ -21,7 +21,7 @@ class Front extends Controller
 {
     var $title;
     var $description;
-    
+
    
     public function contact_us() {
         return view('contact_us', array('title' => 'Welcome', 'description' => '', 'page' => 'contact_us'));
@@ -37,7 +37,6 @@ class Front extends Controller
         Auth::logout();
         return Redirect::away('login');
     }
-
 
     public function register()
     {
